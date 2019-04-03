@@ -1,3 +1,3 @@
 ﻿  Diploma.cpp
-c:\users\kleme\source\repos\diploma\diploma\diploma.cpp(21): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Diploma.vcxproj -> C:\Users\kleme\source\repos\Diploma\x64\Debug\Diploma.exe
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\diploma.cpp(24): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Diploma.vcxproj -> C:\Users\kleme\OneDrive\Dokumenti\GitHub\Diploma\Diploma\x64\Debug\Diploma.exe

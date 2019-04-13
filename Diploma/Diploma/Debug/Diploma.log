@@ -1,9 +1,8 @@
 ﻿  Diploma.cpp
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\diploma.cpp(28): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\diploma.cpp(70): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\diploma.cpp(131): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\diploma.cpp(157): warning C4018: '<': signed/unsigned mismatch
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\diploma.cpp(162): warning C4018: '<': signed/unsigned mismatch
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\diploma.cpp(199): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\diploma.cpp(273): warning C4018: '<': signed/unsigned mismatch
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalghoritm.h(66): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalghoritm.h(153): warning C4018: '<': signed/unsigned mismatch
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalghoritm.h(157): warning C4018: '<': signed/unsigned mismatch
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalghoritm.h(191): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalghoritm.h(192): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\diploma.cpp(38): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Diploma.vcxproj -> C:\Users\kleme\OneDrive\Dokumenti\GitHub\Diploma\Diploma\Debug\Diploma.exe

@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "PSO_Object.h"
-#include "PSO_Alghoritm.h"
 
 
 PSO_Object::PSO_Object()

@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "GeneticAlghoritm.h"
-using namespace std;
 
 GeneticAlghoritm::GeneticAlghoritm() {
 

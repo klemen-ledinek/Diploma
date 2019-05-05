@@ -147,19 +147,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Alghoritm.h" />
     <ClInclude Include="DE_Alghoritm.h" />
     <ClInclude Include="GeneticAlghoritm.h" />
+    <ClInclude Include="Operatorji.h" />
+    <ClInclude Include="Problem.h" />
     <ClInclude Include="PSO_Alghoritm.h" />
     <ClInclude Include="PSO_Object.h" />
+    <ClInclude Include="Resitve.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Alghoritm.cpp" />
     <ClCompile Include="DE_Alghoritm.cpp" />
     <ClCompile Include="Diploma.cpp" />
     <ClCompile Include="GeneticAlghoritm.cpp" />
+    <ClCompile Include="Operatorji.cpp" />
+    <ClCompile Include="Problem.cpp" />
     <ClCompile Include="PSO_Alghoritm.cpp" />
     <ClCompile Include="PSO_Object.cpp" />
+    <ClCompile Include="Resitve.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

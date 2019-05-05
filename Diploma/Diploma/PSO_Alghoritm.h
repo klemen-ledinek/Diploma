@@ -1,4 +1,5 @@
 #pragma once
+#include "PSO_Object.h"
 class PSO_Alghoritm
 {
 private:

@@ -36,13 +36,16 @@
     <ClInclude Include="Alghoritm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Operatorji.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Problem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Resitve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="STO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -68,13 +71,16 @@
     <ClCompile Include="Alghoritm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Operatorji.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Problem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Resitve.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="STO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

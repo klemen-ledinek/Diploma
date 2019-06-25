@@ -150,8 +150,10 @@
     <ClInclude Include="Alghoritm.h" />
     <ClInclude Include="DE.h" />
     <ClInclude Include="DE_Alghoritm.h" />
+    <ClInclude Include="GA.h" />
     <ClInclude Include="GeneticAlghoritm.h" />
     <ClInclude Include="Problem.h" />
+    <ClInclude Include="PSO.h" />
     <ClInclude Include="PSO_Alghoritm.h" />
     <ClInclude Include="PSO_Object.h" />
     <ClInclude Include="Resitve.h" />
@@ -164,8 +166,10 @@
     <ClCompile Include="DE.cpp" />
     <ClCompile Include="DE_Alghoritm.cpp" />
     <ClCompile Include="Diploma.cpp" />
+    <ClCompile Include="GA.cpp" />
     <ClCompile Include="GeneticAlghoritm.cpp" />
     <ClCompile Include="Problem.cpp" />
+    <ClCompile Include="PSO.cpp" />
     <ClCompile Include="PSO_Alghoritm.cpp" />
     <ClCompile Include="PSO_Object.cpp" />
     <ClCompile Include="Resitve.cpp" />

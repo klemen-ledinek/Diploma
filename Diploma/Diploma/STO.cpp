@@ -4,17 +4,50 @@
 
 void STO::polni_populacijo()
 {
-	this->populacija = new double*[this->st_resitev];
-	for (int i = 0; i < this->st_resitev - 1; i++) {
-		for (int j = 0; j < this->vel_problem - 1; j++) {
-			this->populacija[i] = new double[this->vel_problem];
-			this->populacija[i][j] = this->randomDouble(this->min_meja, this->max_meja);
+	vector<vector<double>> populacija(this->st_resitev);
+	for (int i = 0; i < this->st_resitev; i++) {
+		for (int j = 0; j < this->vel_problem; j++) {
+			populacija[i].resize(vel_problem);
+			//this->populacija[i] = new double[this->vel_problem -1];
+			populacija[i][j] = this->randomDouble(this->min_meja, this->max_meja);	
 		}
 	}
+	this->populacija = populacija;
+}
+
+void STO::dodaj_populanta(vector<double> p_populant, int p_index)
+{
+	this->populacija[p_index] = p_populant;
+}
+
+void STO::vrni_rezultate()
+{
+
+	int best = this->vrni_najboljsega();
+	printf("\nBest agent is ");
+	for (int i = 0; i < this->vel_problem; i++) {
+		printf("%f ",this->populacija[best][i]);
+	}
+	 
+	printf("\nAfter iteration");
+	this->display();
+}
+
+int STO::vrni_najboljsega()
+{
+	double* fitness = this->vrni_uspesnost();
+	int w_vrni = 0;
+	for (int i = 1; i < this->st_resitev; i++) {
+		if (abs(fitness[i]) < abs(fitness[w_vrni])) {
+			w_vrni = i;
+		}
+	}
+	return w_vrni;
 }
 
 STO::STO()
 {
+	
 }
 
 
@@ -104,26 +137,57 @@ int STO::getMax_meja()
 	return this->max_meja;
 }
 
+vector<double> STO::getItem(int p_lokacija)
+{
+	vector<double> w_vrni(this->vel_problem);
+	w_vrni = this->populacija[p_lokacija];
+	return w_vrni;
+}
+
 double STO::randomDouble(int p_min, int p_max)
 {
 	double w_vrni = (double)rand() / RAND_MAX;
 	return p_min + w_vrni * (p_max - p_min);
 }
 
+int STO::randomInteger(int p_min, int p_max)
+{
+	int range = (p_min - p_max) + 1;
+	return p_min + (rand() % range);
+}
+
 double * STO::vrni_uspesnost()
 {
 	double* w_vrni = new double[this->st_resitev];
-	for (int i = 0; i < this->st_resitev - 1; i++) {
+	for (int i = 0; i < this->st_resitev; i++) {
 		w_vrni[i] = 0.0;
-		for (int j = 0; j < this->vel_problem - 1; j++) {
+		cout << endl;
+		for (int j = 0; j < this->vel_problem; j++) {
 			w_vrni[i] += this->populacija[i][j] * this->problem[j];
 			
 		}
-		printf("\n%f", w_vrni[i]);
+	}
+	return w_vrni;
+}
+
+double STO::vrni_uspesnot_populanta(vector<double> p_populant)
+{
+	double w_vrni = 0.0;
+	for (int i = 0; i < this->vel_problem; i++) {
+		w_vrni += p_populant[i] * this->problem[i];
 	}
 	return w_vrni;
 }
 
 
-
+void STO::display() {
+	cout << endl;
+	for (int i = 0; i < this->st_resitev; i++) {
+		for (int j = 0; j < this->vel_problem; j++) {
+			printf("%f " ,this->populacija[i][j]);
+		}
+		printf("Uspesnost: %f \n", this->vrni_uspesnot_populanta(this->populacija[i]));
+	}
+	cout << endl;
+}
 

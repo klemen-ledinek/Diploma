@@ -1,2 +1,3 @@
-﻿  STO.cpp
+﻿  GA.cpp
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\ga.cpp(10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   Diploma.vcxproj -> C:\Users\kleme\OneDrive\Dokumenti\GitHub\Diploma\Diploma\Debug\Diploma.exe

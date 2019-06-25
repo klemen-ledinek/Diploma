@@ -4,13 +4,14 @@ class STO
 private:
 	double* problem;
 	int vel_problem;
-	double** populacija;
+	vector<vector<double>> populacija;
 	double mutacija;
 	int st_resitev;
 	int st_iteracij;
 	int cas_izvajanja;
 	int min_meja;
 	int max_meja;
+	
 
 	
 public:
@@ -33,11 +34,19 @@ protected:
 	int getMin_meja();
 	void setMax_meja(int p_max_meja);
 	int getMax_meja();
+	
 
 
 	//Funkcije
+	vector<double> getItem(int p_lokacija);
 	double randomDouble(int p_min, int p_max);
+	int randomInteger(int p_min, int p_max);
 	double* vrni_uspesnost();
+	double vrni_uspesnot_populanta(vector<double> p_populant);
 	void polni_populacijo();
+	void dodaj_populanta(vector<double> p_populant, int p_index);
+	void vrni_rezultate();
+	int vrni_najboljsega();
+	void display();
 };
 

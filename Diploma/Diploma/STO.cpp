@@ -2,14 +2,19 @@
 #include "STO.h"
 
 
-void STO::polni_populacijo()
+void STO::polni_populacijo(bool p_binary)
 {
 	vector<vector<double>> populacija(this->st_resitev);
 	for (int i = 0; i < this->st_resitev; i++) {
 		for (int j = 0; j < this->vel_problem; j++) {
 			populacija[i].resize(vel_problem);
 			//this->populacija[i] = new double[this->vel_problem -1];
-			populacija[i][j] = this->randomDouble(this->min_meja, this->max_meja);	
+			if (!p_binary) {
+				populacija[i][j] = this->randomDouble(this->min_meja, this->max_meja);
+			}
+			else {
+				populacija[i][j] = this->randomInteger(this->min_meja, this->max_meja);
+			}
 		}
 	}
 	this->populacija = populacija;
@@ -31,6 +36,11 @@ void STO::vrni_rezultate()
 	 
 	printf("\nAfter iteration");
 	this->display();
+}
+
+vector<vector<double>> STO::vrni_populacijo()
+{
+	return this->populacija;
 }
 
 int STO::vrni_najboljsega()
@@ -135,6 +145,11 @@ void STO::setMax_meja(int p_max_meja)
 int STO::getMax_meja()
 {
 	return this->max_meja;
+}
+
+void STO::setPopulacija(vector<vector<double>> p_populacija)
+{
+	this->populacija = p_populacija;
 }
 
 vector<double> STO::getItem(int p_lokacija)

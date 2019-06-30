@@ -78,10 +78,15 @@ PSO::PSO(double * p_problem, int p_vel_problem, double p_mutacija, int p_st_resi
 	this->setMin_meja(p_min_meja);
 	this->setMax_meja(p_max_meja);
 	this->vMax = p_v_max;
-	this->polni_populacijo();
+	this->polni_populacijo(false);
 	this->mBest = new int[p_st_resitev];
 	this->mVelocitiy = new float[p_st_resitev];
 	this->nastavi();
+}
+
+double* PSO::vrniRezultate()
+{
+	return this->vrni_uspesnost();
 }
 
 void PSO::init()

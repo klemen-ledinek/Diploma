@@ -34,7 +34,7 @@ protected:
 	int getMin_meja();
 	void setMax_meja(int p_max_meja);
 	int getMax_meja();
-	
+	void setPopulacija(vector<vector<double>> p_populacija);
 
 
 	//Funkcije
@@ -43,9 +43,10 @@ protected:
 	int randomInteger(int p_min, int p_max);
 	double* vrni_uspesnost();
 	double vrni_uspesnot_populanta(vector<double> p_populant);
-	void polni_populacijo();
+	void polni_populacijo(bool p_binary);
 	void dodaj_populanta(vector<double> p_populant, int p_index);
 	void vrni_rezultate();
+	vector<vector<double>> vrni_populacijo();
 	int vrni_najboljsega();
 	void display();
 };

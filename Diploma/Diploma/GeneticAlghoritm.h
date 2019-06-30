@@ -124,24 +124,16 @@ public:
 		return w_vrni;
 	}
 	vector<int> get_parents(float* p_chances) {
-		int* parent = new int[6];
+		vector<int> parents(6);
 		int size = 0;
 		float pc = 0.25;
 		for (int i = 0; i < 6; i++) {
 			if (p_chances[i] < pc) {
-				parent[size] = i;
+				parents[size] = i;
 				size++;
 			}
 		}
-		vector<int> parents(size);
-		if (parent[0] < 0 || parent[0] > 5) {
-			return parents;
-		}
-
-		for (int i = 0; i < size; i++) {
-			parents[i] = parent[i];
-		}
-
+		parents.resize(size + 1);
 		return parents;
 	}
 	int** crossover(vector<int> p_parents, int** p_chromosomes) {

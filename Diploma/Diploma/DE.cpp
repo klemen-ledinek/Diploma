@@ -24,7 +24,12 @@ DE::DE(double* p_problem, int p_vel_problem, double p_mutacija, int p_st_resitev
 	this->setMin_meja(p_min_meja);
 	this->setMax_meja(p_max_meja);
 	this->crossover_rate = p_crossover_rate;
-	this->polni_populacijo();
+	this->polni_populacijo(false);
+}
+
+double* DE::vrniRezultate()
+{
+	return this->vrni_uspesnost();
 }
 
 void DE::init()

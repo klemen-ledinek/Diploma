@@ -1,3 +1,25 @@
-﻿  GA.cpp
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\ga.cpp(10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+﻿  DE.cpp
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\de.cpp(9): warning C4018: '<': signed/unsigned mismatch
+  Diploma.cpp
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalghoritm.h(66): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalghoritm.h(145): warning C4018: '<': signed/unsigned mismatch
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalghoritm.h(149): warning C4018: '<': signed/unsigned mismatch
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalghoritm.h(183): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalghoritm.h(184): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\diploma.cpp(18): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\diploma.cpp(70): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  GA.cpp
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\ga.cpp(8): warning C4018: '<': signed/unsigned mismatch
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\ga.cpp(50): warning C4018: '<': signed/unsigned mismatch
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\ga.cpp(52): warning C4018: '<': signed/unsigned mismatch
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\ga.cpp(82): warning C4018: '<': signed/unsigned mismatch
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\ga.cpp(85): warning C4018: '<': signed/unsigned mismatch
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\ga.cpp(169): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  PSO.cpp
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\pso.cpp(14): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\pso.cpp(18): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\pso.cpp(53): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\pso.cpp(37): warning C4101: 'tempData': unreferenced local variable
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\pso.cpp(80): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
   Diploma.vcxproj -> C:\Users\kleme\OneDrive\Dokumenti\GitHub\Diploma\Diploma\Debug\Diploma.exe

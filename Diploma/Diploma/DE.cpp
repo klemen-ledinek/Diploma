@@ -15,6 +15,8 @@ vector<double> DE::nov_agent(vector<double> p_a_agent, vector<double> p_b_agent,
 DE::DE(double* p_problem, int p_vel_problem, double p_mutacija, int p_st_resitev, int p_st_iteracij, int p_cas_izvajanja,
 		int p_min_meja, int p_max_meja, double p_crossover_rate)
 {
+	
+	
 	this->setProblem(p_problem);
 	this->setVelproblem(p_vel_problem);
 	this->setMutacija(p_mutacija);
@@ -25,19 +27,42 @@ DE::DE(double* p_problem, int p_vel_problem, double p_mutacija, int p_st_resitev
 	this->setMax_meja(p_max_meja);
 	this->crossover_rate = p_crossover_rate;
 	this->polni_populacijo(false);
+	thread t([] {&DE::init; });
+	current_Thread.addThread(move(t));
 }
 
-double* DE::vrniRezultate()
+DE::DE(string * p_problem, int p_vel_problem, double p_mutacija, int p_st_resitev, int p_st_iteracij, int p_cas_izvajanja, int p_min_meja, int p_max_meja, double p_crossover_rate)
 {
-	return this->vrni_uspesnost();
+	this->setVelproblem(p_vel_problem);
+	this->setProblemBinary(p_problem);
+	this->setMutacija(p_mutacija);
+	this->setSt_resitev(p_st_resitev);
+	this->setSt_iteracij(p_st_iteracij);
+	this->setCas_izvajanja(p_cas_izvajanja);
+	this->setMin_meja(p_min_meja);
+	this->setMax_meja(p_max_meja);
+	this->crossover_rate = p_crossover_rate;
+	this->polni_populacijo(false);
+	thread t([] {&DE::init; });
+	current_Thread.addThread(move(t));
 }
 
 void DE::init()
 {
-	this->display();
+	//this->display();
 	double* fitness = this->vrni_uspesnost();
+	int st_iteracij = this->getSt_iteracij();
+	if (this->getSt_iteracij() < 1 && this->getCas_izvajanja() > 0) {
+		st_iteracij = INT_MAX;
+	}
 
-	for (int i = 0; i < this->getSt_iteracij(); i++) {
+	time_t start;
+	time_t end;
+	double elapsed;
+
+	start = time(NULL);
+
+	for (int i = 0; i < st_iteracij; i++) {
 
 		for (int j = 0; j < this->getSt_resitev(); j++) {
 			int a = this->randomInteger(0, this->getSt_resitev() - 1);
@@ -52,21 +77,53 @@ void DE::init()
 			vector<double> b_agent = this->getItem(b);
 			vector<double> c_agent = this->getItem(c);
 
-			//double a_eval = get_single_fitness(a_agent);
-			//double b_eval = get_single_fitness(b_agent);
-			//double c_eval = get_single_fitness(c_agent);
-
 			vector<double> r_agent = nov_agent(a_agent, b_agent, c_agent);
 			double r_eval = this->vrni_uspesnot_populanta(r_agent);
 			double chance = this->randomDouble(0, 1);
-			if (chance < this->crossover_rate && abs(r_eval) < abs(fitness[i])) {
-				fitness[i] = r_eval;
-				this->dodaj_populanta(r_agent, i);
+			if (chance < this->crossover_rate && abs(r_eval) < abs(fitness[j])) {
+				fitness[j] = r_eval;
+				this->dodaj_populanta(r_agent, j);
 			}
 		}
-	}
+
+		end = time(NULL);
+		elapsed = difftime(end, start);
+		if (elapsed > this->getCas_izvajanja()) {
+			break;
+		}
 		
-	this->vrni_rezultate();
+	}
+	//this->vrni_rezultate();
+}
+
+void DE::show_bestPopulant()
+{
+	vector<double> best = this->get_bestPopulant();
+	for (int i = 0; i < best.size(); i++) {
+		printf("%f ", best[i]);
+	}
+}
+
+void DE::show_bestPopultaion()
+{
+	vector<vector<double>> best_pop = this->get_bestPopulation();
+	for (int i = 0; i < best_pop.size(); i++) {
+		for (int j = 0; j < best_pop[i].size(); j++) {
+			printf("%f ", best_pop[i][j]);
+		}
+		printf("\n");
+	}
+}
+
+void DE::show_bestFitnes()
+{
+	double best_fintes = this->get_best_fitnes();
+	printf("%f ", best_fintes);
+}
+
+vector<vector<double>> DE::get_best_Population()
+{
+	return this->get_bestPopulation();
 }
 
 

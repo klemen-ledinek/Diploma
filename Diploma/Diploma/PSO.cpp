@@ -82,6 +82,27 @@ PSO::PSO(double * p_problem, int p_vel_problem, double p_mutacija, int p_st_resi
 	this->mBest = new int[p_st_resitev];
 	this->mVelocitiy = new float[p_st_resitev];
 	this->nastavi();
+	//thread t([] {&PSO::init; });
+	//current_Thread.addThread(move(t));
+}
+
+PSO::PSO(string * p_problem, int p_vel_problem, double p_mutacija, int p_st_resitev, int p_st_iteracij, int p_cas_izvajanja, int p_min_meja, int p_max_meja, double p_v_max)
+{
+	this->setVelproblem(p_vel_problem);
+	this->setProblemBinary(p_problem);
+	this->setMutacija(p_mutacija);
+	this->setSt_resitev(p_st_resitev);
+	this->setSt_iteracij(p_st_iteracij);
+	this->setCas_izvajanja(p_cas_izvajanja);
+	this->setMin_meja(p_min_meja);
+	this->setMax_meja(p_max_meja);
+	this->vMax = p_v_max;
+	this->polni_populacijo(false);
+	this->mBest = new int[p_st_resitev];
+	this->mVelocitiy = new float[p_st_resitev];
+	this->nastavi();
+	//thread t([] {&PSO::init; });
+	//current_Thread.addThread(move(t));
 }
 
 double* PSO::vrniRezultate()
@@ -91,15 +112,62 @@ double* PSO::vrniRezultate()
 
 void PSO::init()
 {
-	this->display();
+	//this->display();
 	int gBest = 0;
 	int gBestTest = 0;
-	for (int i = 0; i < this->getSt_iteracij(); i++) {
+	int st_iteracij = this->getSt_iteracij();
+	if (this->getSt_iteracij() < 1 && this->getCas_izvajanja() > 0) {
+		st_iteracij = INT_MAX;
+	}
+
+	time_t start;
+	time_t end;
+	double elapsed;
+
+	start = time(NULL);
+
+	for (int i = 0; i < st_iteracij; i++) {
 		gBestTest = this->vrni_najboljsega();
 		this->getVelocitiy(gBestTest);
 		this->updateParticle(gBestTest);
+
+		end = time(NULL);
+		elapsed = difftime(end, start);
+		if (elapsed > this->getCas_izvajanja()) {
+			break;
+		}
 	}
-	this->vrni_rezultate();
+	//this->vrni_rezultate();
+}
+
+void PSO::show_bestPopulant()
+{
+	vector<double> best = this->get_bestPopulant();
+	for (int i = 0; i < best.size(); i++) {
+		printf("%f ", best[i]);
+	}
+}
+
+void PSO::show_bestPopultaion()
+{
+	vector<vector<double>> best_pop = this->get_bestPopulation();
+	for (int i = 0; i < best_pop.size(); i++) {
+		for (int j = 0; j < best_pop[i].size(); j++) {
+			printf("%f ", best_pop[i][j]);
+		}
+		printf("\n");
+	}
+}
+
+void PSO::show_bestFitnes()
+{
+	double best_fintes = this->get_best_fitnes();
+	printf("%f ", best_fintes);
+}
+
+vector<vector<double>> PSO::get_best_Population()
+{
+	return this->get_bestPopulation();
 }
 
 PSO::~PSO()

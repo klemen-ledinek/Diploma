@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "STO.h"
+#include "cec19_func2.h"
 
 
 void STO::polni_populacijo(bool p_binary)
@@ -33,7 +34,7 @@ void STO::vrni_rezultate()
 	for (int i = 0; i < this->vel_problem; i++) {
 		printf("%f ",this->populacija[best][i]);
 	}
-	 
+	
 	printf("\nAfter iteration");
 	this->display();
 }
@@ -57,7 +58,7 @@ int STO::vrni_najboljsega()
 
 STO::STO()
 {
-	
+	this->best_fitnes = DBL_MAX;
 }
 
 
@@ -152,6 +153,24 @@ void STO::setPopulacija(vector<vector<double>> p_populacija)
 	this->populacija = p_populacija;
 }
 
+vector<vector<double>> STO::get_bestPopulation()
+{
+	this->current_Thread.finish();
+	return this->best_populacija;
+}
+vector<double> STO::get_bestPopulant()
+{
+	this->current_Thread.finish();
+	return this->best_populant;
+}
+
+double STO::get_best_fitnes()
+{
+	this->current_Thread.finish();
+	return this->best_fitnes;
+}
+
+
 vector<double> STO::getItem(int p_lokacija)
 {
 	vector<double> w_vrni(this->vel_problem);
@@ -174,24 +193,53 @@ int STO::randomInteger(int p_min, int p_max)
 double * STO::vrni_uspesnost()
 {
 	double* w_vrni = new double[this->st_resitev];
-	for (int i = 0; i < this->st_resitev; i++) {
+	/*for (int i = 0; i < this->st_resitev; i++) {
 		w_vrni[i] = 0.0;
 		cout << endl;
 		for (int j = 0; j < this->vel_problem; j++) {
 			w_vrni[i] += this->populacija[i][j] * this->problem[j];
 			
 		}
+		if (abs(w_vrni[i]) < abs(this->best_fitnes)) {
+			this->best_fitnes = w_vrni[i];
+			this->best_populant = this->populacija[i];
+			this->best_populacija = this->populacija;
+		}
+	}*/
+	
+	cec19_func2 func = cec19_func2();
+	for (int i = 0; i < this->st_resitev; i++) {
+		w_vrni[i] = DBL_MAX;
+		func.cec19_test_func(this->populacija[i].data(), w_vrni, this->vel_problem, 1, this->problem[0]);
+		if (abs(w_vrni[i]) < abs(this->best_fitnes)) {
+			this->best_fitnes = w_vrni[i];
+			this->best_populant = this->populacija[i];
+			this->best_populacija = this->populacija;
+		}
 	}
+	//double* result = new double(5);
+
+	
+
+
 	return w_vrni;
 }
 
+
+
 double STO::vrni_uspesnot_populanta(vector<double> p_populant)
 {
-	double w_vrni = 0.0;
-	for (int i = 0; i < this->vel_problem; i++) {
-		w_vrni += p_populant[i] * this->problem[i];
+	double* w_vrni = new double[1]; 
+	w_vrni[0] = 0.0;
+	cec19_func2 func = cec19_func2();
+	if (this->vel_problem < 1) {
+		return DBL_MAX;
 	}
-	return w_vrni;
+	func.cec19_test_func(p_populant.data(), w_vrni, this->vel_problem, 1, this->problem[0]);
+	/*for (int i = 0; i < this->vel_problem; i++) {
+		w_vrni += p_populant[i] * this->problem[i];
+	}*/
+	return w_vrni[0];
 }
 
 
@@ -205,4 +253,30 @@ void STO::display() {
 	}
 	cout << endl;
 }
+double toDecimal(string p_bits) {
+	double w_vrni = 0.0;
+	int value_to_add = 1;
+
+	for (int i = p_bits.length(); i > 0; i--)
+	{
+
+
+		if (p_bits.at(i - 1) == '1')
+
+			w_vrni += value_to_add;
+
+		value_to_add *= 2;
+
+	}//next bit
+	return w_vrni;
+}
+void STO::setProblemBinary(string * p_problem)
+{
+	this->problem = new double[this->vel_problem];
+	for (int i = 0; i < this->vel_problem; i++) {
+		this->problem[i] = toDecimal(p_problem[i]);
+	}
+}
+
+
 

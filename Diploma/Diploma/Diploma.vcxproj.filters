@@ -33,15 +33,6 @@
     <ClInclude Include="DE_Alghoritm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Alghoritm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Problem.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Resitve.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="STO.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -52,6 +43,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Wilcoxon_Test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Wilcoxon_Element.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Threads.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cec19_func2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -74,15 +77,6 @@
     <ClCompile Include="DE_Alghoritm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Alghoritm.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Resitve.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="STO.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -93,6 +87,18 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Wilcoxon_Test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Wilcoxon_Element.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Threads.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cec19_func2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

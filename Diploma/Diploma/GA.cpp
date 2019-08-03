@@ -155,12 +155,42 @@ GA::GA(double * p_problem, int p_vel_problem, double p_mutacija, int p_st_resite
 	this->setMax_meja(p_max_meja);
 	this->polni_populacijo(true);
 	this->crossover_rate = p_crossover_rate;
+	thread t([] {&GA::init; });
+	current_Thread.addThread(move(t));
+}
+
+GA::GA(string * p_problem, int p_vel_problem, double p_mutacija, int p_st_resitev, int p_st_iteracij, int p_cas_izvajanja, int p_min_meja, int p_max_meja, double p_v_max, double p_crossover_rate)
+{
+	this->setVelproblem(p_vel_problem);
+	this->setProblemBinary(p_problem);
+	this->setMutacija(p_mutacija);
+	this->setSt_resitev(p_st_resitev);
+	this->setSt_iteracij(p_st_iteracij);
+	this->setCas_izvajanja(p_cas_izvajanja);
+	this->setMin_meja(p_min_meja);
+	this->setMax_meja(p_max_meja);
+	this->polni_populacijo(true);
+	this->crossover_rate = p_crossover_rate;
+	thread t([] {&GA::init; });
+	current_Thread.addThread(move(t));
 }
 
 void GA::init()
 {
 	this->display();
-	for (int i = 0; i < 1; i++) {
+	int st_iteracij = this->getSt_iteracij();
+	if (this->getSt_iteracij() < 1 && this->getCas_izvajanja() > 0) {
+		st_iteracij = INT_MAX;
+	}
+
+	time_t start;
+	time_t end;
+	double elapsed;
+
+	start = time(NULL);
+
+
+	for (int i = 0; i < st_iteracij; i++) {
 		double* evaluation = this->vrni_uspesnost();
 		vector<double> fitness = this->selection(evaluation);
 		double total_fitness = this->total_fitness(fitness);
@@ -188,16 +218,11 @@ void GA::init()
 		cout << endl;
 		this->setPopulacija(parents);
 
-		//parents = new_chromosomes(chanc);
-
-		//Crossover
-		//double* parent_chance = randNums();
-		//vector<int> parents = get_parents(parent_chance);
-		//new_chromosome = crossover(parents, p_chromosome);
-		//p_chromosome = new_chromosome;
-		//Mutation
-		//new_chromosome = mutation(p_chromosome);
-		//p_chromosome = new_chromosome;
+		end = time(NULL);
+		elapsed = difftime(end, start);
+		if (elapsed > this->getCas_izvajanja()) {
+			break;
+		}
 	}
 
 	this->vrni_rezultate();

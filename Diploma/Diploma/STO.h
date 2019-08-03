@@ -1,16 +1,24 @@
 #pragma once
-class STO
+#include "Threads.h"
+class STO:
+		public Threads
 {
+protected:
+	Threads current_Thread = Threads();
 private:
 	double* problem;
 	int vel_problem;
 	vector<vector<double>> populacija;
+	vector<vector<double>> best_populacija;
+	vector<double> best_populant;
+	double best_fitnes;
 	double mutacija;
 	int st_resitev;
 	int st_iteracij;
 	int cas_izvajanja;
 	int min_meja;
 	int max_meja;
+	
 	
 
 	
@@ -35,8 +43,9 @@ protected:
 	void setMax_meja(int p_max_meja);
 	int getMax_meja();
 	void setPopulacija(vector<vector<double>> p_populacija);
-
-
+	vector<vector<double>> get_bestPopulation();
+	vector<double> get_bestPopulant();
+	double get_best_fitnes();
 	//Funkcije
 	vector<double> getItem(int p_lokacija);
 	double randomDouble(int p_min, int p_max);
@@ -49,5 +58,6 @@ protected:
 	vector<vector<double>> vrni_populacijo();
 	int vrni_najboljsega();
 	void display();
+	void setProblemBinary(string *p_problem);
 };
 

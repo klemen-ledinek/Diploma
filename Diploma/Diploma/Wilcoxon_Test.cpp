@@ -96,16 +96,14 @@ void Wilcoxon_Test::init()
 	this->calculate();
 }
 
-Wilcoxon_Test::Wilcoxon_Test(vector<vector<double>> pop_x, vector<vector<double>> pop_y)
+Wilcoxon_Test::Wilcoxon_Test(vector<double> pop_x, vector<double> pop_y)
 {
 	if (pop_x.size() != pop_y.size()) {
 		printf("Neenakomerne populacije!");
 		return;
 	}
 	for (int i = 0; i < pop_x.size(); i++) {
-		double fit_x = this->vrni_uspesnot_populanta(pop_x[i]);
-		double fit_y = this->vrni_uspesnot_populanta(pop_y[i]);
-		dodaj_Element(fit_x, fit_y);
+		dodaj_Element(pop_x[i], pop_y[i]);
 	}
 }
 

@@ -5,6 +5,7 @@
 Threads::Threads()
 {
 	this->thread_list =  vector<thread>();
+	this->size = 0;
 }
 
 
@@ -18,9 +19,11 @@ Threads::~Threads()
 	}
 }
 
-void Threads::addThread(thread p_thread)
+void Threads::addThread(thread p_nit)
 {
-	this->thread_list.push_back(move(p_thread));
+	this->thread_list.resize(this->size + 1);
+	this->thread_list[this->size] = (move(p_nit));
+	this->size += 1;
 }
 
 
@@ -30,8 +33,6 @@ void Threads::finish()
 		if (this->thread_list[i].joinable()) {
 			this->thread_list[i].join();
 		}
-		
-		//}
 			
 	}
 }

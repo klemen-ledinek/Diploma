@@ -21,30 +21,6 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GeneticAlghoritm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PSO_Object.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PSO_Alghoritm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DE_Alghoritm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="STO.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DE.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PSO.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GA.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Wilcoxon_Test.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -54,7 +30,19 @@
     <ClInclude Include="Threads.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="cec19_func2.h">
+    <ClInclude Include="DifferentialEvolution.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneticAlgorithm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSwarmOptimization.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StochasticAlgorithm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Problemi.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -63,30 +51,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Diploma.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneticAlghoritm.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PSO_Object.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PSO_Alghoritm.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DE_Alghoritm.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="STO.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DE.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PSO.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GA.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Wilcoxon_Test.cpp">
@@ -98,7 +62,19 @@
     <ClCompile Include="Threads.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="cec19_func2.cpp">
+    <ClCompile Include="DifferentialEvolution.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneticAlgorithm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSwarmOptimization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StochasticAlgorithm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Problemi.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,37 +1,48 @@
 ﻿  stdafx.cpp
-  DE.cpp
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\de.cpp(9): warning C4018: '<': signed/unsigned mismatch
-  DE_Alghoritm.cpp
+  Problemi.cpp
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\problemi.cpp(45): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\problemi.cpp(46): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(208): note: see declaration of 'fopen'
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\problemi.cpp(56): error C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(1197): note: see declaration of 'fscanf'
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\problemi.cpp(65): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\problemi.cpp(66): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(208): note: see declaration of 'fopen'
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\problemi.cpp(77): error C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(1197): note: see declaration of 'fscanf'
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\problemi.cpp(12): warning C4101: 'j': unreferenced local variable
+  DifferentialEvolution.cpp
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\differentialevolution.cpp(9): warning C4018: '<': signed/unsigned mismatch
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\differentialevolution.cpp(111): warning C4018: '<': signed/unsigned mismatch
   Diploma.cpp
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalghoritm.h(66): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalghoritm.h(145): warning C4018: '<': signed/unsigned mismatch
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalghoritm.h(149): warning C4018: '<': signed/unsigned mismatch
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalghoritm.h(183): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalghoritm.h(184): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\diploma.cpp(17): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  GA.cpp
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\ga.cpp(8): warning C4018: '<': signed/unsigned mismatch
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\ga.cpp(50): warning C4018: '<': signed/unsigned mismatch
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\ga.cpp(52): warning C4018: '<': signed/unsigned mismatch
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\ga.cpp(82): warning C4018: '<': signed/unsigned mismatch
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\ga.cpp(85): warning C4018: '<': signed/unsigned mismatch
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\ga.cpp(169): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  GeneticAlghoritm.cpp
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalghoritm.h(66): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalghoritm.h(145): warning C4018: '<': signed/unsigned mismatch
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalghoritm.h(149): warning C4018: '<': signed/unsigned mismatch
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalghoritm.h(183): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalghoritm.h(184): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalghoritm.cpp(16): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  PSO.cpp
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\pso.cpp(14): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\pso.cpp(18): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\pso.cpp(53): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\pso.cpp(37): warning C4101: 'tempData': unreferenced local variable
-c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\pso.cpp(80): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  PSO_Alghoritm.cpp
-  PSO_Object.cpp
-  STO.cpp
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\diploma.cpp(16): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  GeneticAlgorithm.cpp
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalgorithm.cpp(8): warning C4018: '<': signed/unsigned mismatch
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalgorithm.cpp(59): warning C4018: '<': signed/unsigned mismatch
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalgorithm.cpp(61): warning C4018: '<': signed/unsigned mismatch
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalgorithm.cpp(97): warning C4018: '<': signed/unsigned mismatch
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalgorithm.cpp(100): warning C4018: '<': signed/unsigned mismatch
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalgorithm.cpp(229): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalgorithm.cpp(264): warning C4018: '<': signed/unsigned mismatch
+  ParticleSwarmOptimization.cpp
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\particleswarmoptimization.cpp(14): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\particleswarmoptimization.cpp(18): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\particleswarmoptimization.cpp(22): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\particleswarmoptimization.cpp(55): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\particleswarmoptimization.cpp(39): warning C4101: 'tempData': unreferenced local variable
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\particleswarmoptimization.cpp(70): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\particleswarmoptimization.cpp(85): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\particleswarmoptimization.cpp(103): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\particleswarmoptimization.cpp(150): warning C4018: '<': signed/unsigned mismatch
+  StochasticAlgorithm.cpp
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\stochasticalgorithm.cpp(17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\stochasticalgorithm.cpp(195): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\stochasticalgorithm.cpp(213): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  Threads.cpp
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\threads.cpp(14): warning C4018: '<': signed/unsigned mismatch
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\threads.cpp(32): warning C4018: '<': signed/unsigned mismatch
   Wilcoxon_Element.cpp
   Wilcoxon_Test.cpp
 c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\wilcoxon_test.cpp(8): warning C4018: '<': signed/unsigned mismatch
@@ -40,7 +51,4 @@ c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\wilcoxon_test.c
 c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\wilcoxon_test.cpp(31): warning C4018: '>=': signed/unsigned mismatch
 c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\wilcoxon_test.cpp(34): warning C4018: '<': signed/unsigned mismatch
 c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\wilcoxon_test.cpp(65): warning C4018: '<': signed/unsigned mismatch
-  Generating code
-  All 455 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Finished generating code
-  Diploma.vcxproj -> C:\Users\kleme\OneDrive\Dokumenti\GitHub\Diploma\Diploma\Release\Diploma.exe
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\wilcoxon_test.cpp(105): warning C4018: '<': signed/unsigned mismatch

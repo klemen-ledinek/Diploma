@@ -1,8 +1,7 @@
 #pragma once
 #include "Wilcoxon_Element.h"
-#include "STO.h"
-class Wilcoxon_Test :
-	public STO
+#include "StochasticAlgorithm.h"
+class Wilcoxon_Test
 {
 private:
 	vector<Wilcoxon_Element> elementi;
@@ -19,7 +18,7 @@ public:
 
 	void init();
 
-	Wilcoxon_Test(vector<vector<double>> pop_x, vector<vector<double>> pop_y);
+	Wilcoxon_Test(vector<double> pop_x, vector<double> pop_y);
 	~Wilcoxon_Test();
 };
 

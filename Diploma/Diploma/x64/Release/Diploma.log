@@ -1,11 +1,34 @@
-﻿  Diploma.cpp
-c:\users\kleme\source\repos\diploma\diploma\diploma.cpp(13): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+﻿  stdafx.cpp
+  Problemi.cpp
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\problemi.cpp(12): warning C4101: 'j': unreferenced local variable
+  DifferentialEvolution.cpp
+  Diploma.cpp
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\diploma.cpp(16): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  GeneticAlgorithm.cpp
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalgorithm.cpp(33): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalgorithm.cpp(93): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\geneticalgorithm.cpp(229): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  ParticleSwarmOptimization.cpp
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\particleswarmoptimization.cpp(14): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\particleswarmoptimization.cpp(18): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\particleswarmoptimization.cpp(22): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\particleswarmoptimization.cpp(55): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\particleswarmoptimization.cpp(39): warning C4101: 'tempData': unreferenced local variable
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\particleswarmoptimization.cpp(70): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\particleswarmoptimization.cpp(85): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\particleswarmoptimization.cpp(103): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  StochasticAlgorithm.cpp
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\stochasticalgorithm.cpp(17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\stochasticalgorithm.cpp(195): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\stochasticalgorithm.cpp(213): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\stochasticalgorithm.cpp(232): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Threads.cpp
+  Wilcoxon_Element.cpp
+  Wilcoxon_Test.cpp
+c:\users\kleme\onedrive\dokumenti\github\diploma\diploma\diploma\wilcoxon_test.cpp(72): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   Generating code
-c:\users\kleme\source\repos\diploma\diploma\diploma.cpp(13): warning C4724: potential mod by 0
-c:\users\kleme\source\repos\diploma\diploma\diploma.cpp(13): warning C4724: potential mod by 0
-c:\users\kleme\source\repos\diploma\diploma\diploma.cpp(13): warning C4724: potential mod by 0
-  2 of 11 functions (18.2%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
+  527 of 527 functions (100.0%) were compiled.
+    517 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  Diploma.vcxproj -> C:\Users\kleme\source\repos\Diploma\x64\Release\Diploma.exe
+  Diploma.vcxproj -> C:\Users\kleme\OneDrive\Dokumenti\GitHub\Diploma\Diploma\x64\Release\Diploma.exe
